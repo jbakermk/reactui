@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React-Bootstrap CodeSandbox StarterX</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div class="custom-container container">
+      <h2 align="center">Login</h2>
+      <div id="LoginForm"></div>
+
+      <p>
+        <small> No account? Register <a href="register.html">here</a>. </small>
+      </p>
+    </div>
+
+    <div id="QRDialog"></div>
+
+    <div
+      id="modalLoginCheckToken"
+      class="modal fade"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Verify your token</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div
+              id="msgTokenCheckFailed"
+              class="alert alert-danger collapse"
+              role="alert"
+            >
+              Provided token could not be recognized
+            </div>
+            <p>
+              To complete login you should verify your token generated in Google
+              Authenticator application. Please, enter the currently generated
+              token to the field below
+            </p>
+            <div class="text-center">
+              <input id="loginToken" type="text" placeholder="Enter token" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="btnTokenVerify" type="button" class="btn btn-primary">
+              Verify
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
